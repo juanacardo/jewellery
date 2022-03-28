@@ -1,8 +1,8 @@
 .page {
   min-width: 320px;
-  font-family: $mono;
-  font-size: 15px;
-  line-height: 22px;
+  font-family: $poppins;
+  font-size: 16px;
+  line-height: 130%;
   color: $font;
   background-color: $white;
 }
@@ -15,4 +15,19 @@
 }
 .page__main {
   flex: 1 1 auto;
+}
+.page__title {
+  font-family: $cormorant;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+  margin: 0;
+}
+.page__link {
+  display: inline-block;
+  color: inherit;
+  text-align: center;
+  text-decoration-color: $brown;
+  text-underline-offset: 3px;
 }

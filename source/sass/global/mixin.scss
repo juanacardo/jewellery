@@ -4,15 +4,15 @@
   padding: 0;
 }
 .container {
-  max-width: 1422px;
+  max-width: 1170px;
   margin: 0 auto;
   padding-right: 40px;
   padding-left: 40px;
 
   @media (max-width: $tablet-width) {
+    padding-right: 45px;
+    padding-left: 45px;
     max-width: 100%;
-    padding-right: 25px;
-    padding-left: 25px;
   }
   @media (max-width: $mobile-width) {
     padding-right: 15px;

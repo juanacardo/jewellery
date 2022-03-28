@@ -1,3 +1,5 @@
+@import "vendor/normalize.scss";
+
 @import "global/fonts.scss";
 @import "global/variables.scss";
 @import "global/global.scss";
@@ -8,3 +10,14 @@
 @import "blocks/spoller.scss";
 @import "blocks/popup.scss";
 @import "blocks/popup-overlay.scss";
+@import "blocks/page-header.scss";
+@import "blocks/search.scss";
+@import "blocks/header-navigation.scss";
+@import "blocks/promo.scss";
+@import "blocks/new-in-shop.scss";
+@import "blocks/slider.scss";
+@import "blocks/blog.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/sign-up.scss";
+@import "blocks/footer-menu.scss";
+@import "blocks/social.scss";
