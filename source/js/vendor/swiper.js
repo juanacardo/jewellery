@@ -10419,7 +10419,7 @@
 }));
 //# sourceMappingURL=swiper-bundle.js.map
 
-let initSwiper = new Swiper('.slider', {
+const slider = new Swiper('.slider', {
   spaceBetween: 30,
   breakpoints: {
     320: {
@@ -10441,12 +10441,15 @@ let initSwiper = new Swiper('.slider', {
   },
   pagination: {
     el: '.swiper-pagination',
-    type: 'castom',
-    bulletElement: 'li',
     clickable: true,
     bulletClass: 'swiper-pagination-bullet slider__pagination-item',
-    currentClass: 'swiper-pagination-current slider__pagination-item--current',
     bulletActiveClass: 'swiper-pagination-bullet-active slider__pagination-item--active',
+    renderBullet: function (index, className) {
+      return '<li class="' + className + '">' + (index + 1) + '</li>';
+    },
   },
 });
-export {initSwiper};
+const initSlider = function () {
+  slider.init(slider);
+}
+export {initSlider};

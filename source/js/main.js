@@ -1,9 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initSpoller} from './modules/spoller.js';
-import {initSwiper} from './vendor/swiper.js';
+import {initSlider} from './vendor/swiper.js';
 import {initMenu} from './modules/menu.js';
 import './modules/popup.js';
+import './modules/filter.js';
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -16,14 +17,12 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
   initMenu();
-  initSwiper();
-
+  initSlider();
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
     initModals();
     initSpoller();
-
   });
 });
 

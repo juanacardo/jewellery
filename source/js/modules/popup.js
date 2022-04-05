@@ -1,107 +1,79 @@
 const page = document.querySelector('.page');
 const popup = document.querySelector('.popup');
 const popupOpenButton = document.querySelector('.page-header__login');
-const popupCloseButton = document.querySelector('.popup__button');
+const popupCloseButton = popup.querySelector('.popup__button');
 const popupOverlay = document.querySelector('.popup-overlay');
-const filter = document.querySelector('.filter');
-const filterOpenButton = document.querySelector('.filter__show-button');
-const filterCloseButton = document.querySelector('.filter__close');
 const popupForm = document.querySelector('.popup-form');
+const popupEmailInput = document.getElementById('popup-email');
 
-let showModal = function (modal, buttonOpen, modalClass) {
-  buttonOpen.addEventListener('click', function (e) {
-    e.preventDefault();
-    modal.classList.remove(modalClass);
-    popupOverlay.classList.remove('popup-overlay--closed');
-    page.classList.add('blocked');
-  });
+// Закрытие модального окна по клику
+const onCloseButtonClick = () => {
+  popup.classList.add('popup--closed');
+  page.classList.remove('blocked');
+  popupOverlay.classList.add('popup-overlay--closed');
 };
 
-let hideModal = function (modal, buttonClose, modalClass) {
-  buttonClose.addEventListener('click', function () {
-    modal.classList.add(modalClass);
-    popupOverlay.classList.add('popup-overlay--closed');
-    page.classList.remove('blocked');
-  });
+// Закрытие информ. окна по клику вне его области
+const onOverlayClick = (evt) => {
+  if (evt.target.closest('.popup-overlay')) {
+    onCloseButtonClick();
+    window.removeEventListener('click', onOverlayClick);
+  }
 };
 
-let showPopup = function () {
-  popupForm.reset();
-  showModal(popup, popupOpenButton, 'popup--closed');
+// Проверка нажатия клавиши Escape
+const isEscapeKey = (evt) => evt.key === 'Escape';
+
+// Закрытие модального окна клавишей Esc
+const onEscPress = (evt) => {
+  if (isEscapeKey(evt)) {
+    evt.preventDefault();
+    onCloseButtonClick();
+  }
 };
-let hidePopup = hideModal(popup, popupCloseButton, 'popup--closed');
-let showFilter = showModal(filter, filterOpenButton, 'filter--closed');
-let hideFilter = hideModal(filter, filterCloseButton, 'filter--closed');
 
+// Замена адреса модального окна при загрузке JS
+const changeUrl = () => {
+  popupOpenButton.href = '#';
+};
 
-export {showPopup, hidePopup, showFilter, hideFilter};
-// // Замыкание фокуса внутри попапа
-// const catchFocus = function () {
-//   const focusableElementsString =
-//     'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, [contenteditable]';
-//   const focusableElements = popup.querySelectorAll(focusableElementsString);
-//   focusableElements = Array.prototype.slice.call(focusableElements);
-//   const firstTabStop = focusableElements[0];
-//   const lastTabStop = focusableElements[focusableElements.length - 1];
-//   firstTabStop.focus();
-//   popup.addEventListener('keydown', function (e) {
-//     if (e.keyCode === 9) {
-//       if (e.shiftKey) {
-//         if (document.activeElement === firstTabStop) {
-//           e.preventDefault();
-//           lastTabStop.focus();
-//         }
-//       } else {
-//         if (document.activeElement === lastTabStop) {
-//           e.preventDefault();
-//           firstTabStop.focus();
-//         }
-//       }
-//     }
-//   });
-// };
+// Добавление автофокуса на поле e-mail
+const setFocus = () => {
+  popupEmailInput.focus();
+};
 
-// // Сохранение в Local Storage
-// const saveInLocalStorage = function (input) {
-//   localStorage.setItem(input.name, input.value);
-// };
+// Автозаполнение поля e-mail на основании последней записи Local Storage
+const addEmailValue = () => {
+  popupEmailInput.value = (localStorage.getItem('e-mail'));
+};
 
-// const onPopupFormEscKeydown = function (e) {
-//   if (e.keyCode === 27) {
-//     hideModal();
-//   }
-// };
+// Сохранение данных поля e-mail в Local Storage
+const saveToLocalStorage = (input) => {
+  localStorage.setItem(input.name, input.value);
+};
 
-// const openPopup = function () {
-//   showPopup();
-//   catchFocus();
-//   popupCloseButton.addEventListener('click', hidePopup);
-//   page.addEventListener('keydown', onPopupFormEscKeydown);
-//   popupOverlay.addEventListener('click', hidePopup);
-// };
+// Поведение формы при ее отправке
+const onFormSubmit = (evt) => {
+  evt.preventDefault();
+  saveToLocalStorage(popupEmailInput);
+  onCloseButtonClick();
+};
 
-// const openFilter = function () {
-//   showFilter();
-//   catchFocus();
-//   filterCloseButton.addEventListener('click', hideFilter);
-//   page.addEventListener('keydown', onPopupFormEscKeydown);
-//   popupOverlay.addEventListener('click', hideFilter);
-// };
+// Открытие модального окна по клику, добавление основных обработчиков
+const onOpenButtonClick = () => {
+  changeUrl();
+  popup.classList.remove('popup--closed');
+  page.classList.add('blocked');
+  popupOverlay.classList.remove('popup-overlay--closed');
+  setFocus();
+  addEmailValue();
+  popupCloseButton.addEventListener('click', onCloseButtonClick, {once: true});
+  window.addEventListener('click', onOverlayClick);
+  document.addEventListener('keydown', onEscPress, {once: true});
+  popupForm.addEventListener('submit', onFormSubmit, {once: true});
+};
 
-// popupOpenButton.addEventListener('click', openPopup);
-// filterOpenButton.addEventListener('click', openPopup);
+// Добавление обработчика событий на элемент .page-header__login
+popupOpenButton.addEventListener('click', onOpenButtonClick);
 
-
-// const closeModal = function () {
-//   popupCloseButton.removeEventListener('click', hideModal);
-//   page.removeEventListener('keydown', onPopupFormEscKeydown);
-//   popupOverlay.removeEventListener('click', hideModal);
-//   inputEmail.removeEventListener('input', validatePopupEmail);
-//   inputPassword.removeEventListener('input', validatePopupPassword);
-//   saveInLocalStorage(inputEmail);
-// };
-
-
-// popupForm.addEventListener('submit', function (evt) {
-//   closeModal();
-// });
+export {page, popupOverlay, onOverlayClick, onEscPress};
