@@ -1,0 +1,35 @@
+.footer-menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, min-content);
+  grid-auto-flow: column;
+  column-gap: 18%;
+  margin-right: 9.4%;
+  padding-top: 6px;
+
+  @media (max-width: $tablet-width) {
+    column-gap: 78px;
+    margin-right: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    margin-right: 0;
+    column-gap: unset;
+    grid-auto-flow: unset;
+    flex: 1 0 100%;
+  }
+}
+
+.footer-menu__item {
+  margin-bottom: 21px;
+  min-width: 177px;
+}
+
+.footer-menu__item:nth-child(4n) {
+  margin-bottom: 40px;
+}
+
+.footer-menu__link:hover {
+  opacity: 0.5;
+}

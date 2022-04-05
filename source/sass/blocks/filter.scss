@@ -1,0 +1,259 @@
+.filter__form {
+  @media (max-width: $tablet-width) {
+    display: block;
+    width: 422px;
+    position: fixed;
+    z-index: 11;
+    top: 26px;
+    left: 0;
+    background-color: $white;
+    box-shadow: 0 5px 32px $shadow;
+
+    @media (max-width: $tablet-width) {
+      padding-bottom: 40px;
+    }
+
+    @media (max-width: $mobile-width) {
+      width: 270px;
+      top: 76px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.filter--closed .filter__form {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.filter__wrapper {
+  border: 1px solid $brown;
+  margin-bottom: 35px;
+
+  @media (max-width: $tablet-width) {
+    border: none;
+    margin-bottom: 41px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.filter__item {
+  padding: 23px 25px 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 36px 22px 12px;
+    border-bottom: 1px solid $brown;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 25px 20px 0;
+  }
+}
+
+.filter__item:not(:last-child) {
+  border-bottom: 1px solid $brown;
+}
+
+.filter__label {
+  display: flex;
+  margin-bottom: 22px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.filter__label--range {
+  margin-bottom: 15px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.filter__label h3 {
+  font-size: 16px;
+  margin: 0;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+  }
+}
+
+.filter__button {
+  border: none;
+  background-color: transparent;
+  color: #a87b62;
+  padding: 0 12px;
+  margin-left: auto;
+  margin-right: -12px;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: -12px;
+  }
+}
+
+.filter__label h3:hover,
+.filter__button:hover {
+  opacity: 0.5;
+}
+
+.filter__button svg {
+  @media (max-width: $tablet-width) {
+    width: 34px;
+    height: 16px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 21px;
+    height: 10px;
+  }
+}
+
+.filter__content {
+  margin-bottom: 28px;
+}
+
+.filter__content--range {
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.filter__checkbox {
+  position: relative;
+  padding-left: 9px;
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.filter__checkbox label {
+  padding-left: 25px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    font-size: 16px;
+    padding-left: 30px;
+  }
+}
+
+.filter__checkbox label:hover {
+  opacity: 0.5;
+}
+
+.filter__checkbox input + label::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  left: 9px;
+  top: 3px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $brown;
+
+  @media (max-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 10px;
+    top: 1px;
+  }
+}
+
+.filter__checkbox input:checked + label::before {
+  background-color: $brown;
+}
+
+.filter__checkbox input:disabled + label::before,
+.filter__checkbox input:checked:disabled + label::before {
+  filter: opacity(0.5);
+}
+
+.filter__apply-button {
+  margin-bottom: 26px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.filter__show-button {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.filter__close {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: $black;
+    color: $white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    position: absolute;
+    top: -15px;
+    right: -17px;
+    cursor: pointer;
+  }
+
+  @media (max-width: $mobile-width) {
+    right: -10px;
+  }
+}
+
+.filter__range {
+  @media (max-width: $tablet-width) {
+    margin-right: 65px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 -10px;
+  }
+}
+
+.filter__form .button {
+  @media (max-width: $tablet-width) {
+    width: 362px;
+    margin-left: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 230px;
+  }
+}

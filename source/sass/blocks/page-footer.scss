@@ -1,0 +1,22 @@
+.page-footer {
+  background-color: $black;
+  color: $white;
+  padding: 90px 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 50px 0 57px;
+  }
+}
+
+.page-footer__flex-wrapper {
+  display: flex;
+
+  @media (max-width: $tablet-width) {
+    flex-wrap: wrap;
+  }
+}
+
+.page-footer a {
+  color: inherit;
+  text-decoration: none;
+}

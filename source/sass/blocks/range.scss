@@ -1,0 +1,88 @@
+.range {
+  padding: 11px 0 29px;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding: 18px 0 43px;
+  }
+}
+
+.range__inner {
+  height: 1px;
+  background-color: $bg-gray;
+  position: relative;
+}
+
+.range__progress {
+  background-color: $brown;
+  width: 53%;
+  height: 1px;
+  top: 0;
+  left: 50%;
+  transform: translateX(50%);
+
+  @media (max-width: $tablet-width) {
+    width: 55%;
+    left: 40%;
+    transform: translateX(40%);
+  }
+}
+
+.range__button {
+  position: absolute;
+  top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    top: 8px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 10px;
+  }
+}
+
+.range__button--left {
+  left: 17%;
+
+  @media (max-width: $tablet-width) {
+    left: 15%;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 13%;
+  }
+}
+
+.range__button--right {
+  right: 11%;
+
+  @media (max-width: $tablet-width) {
+    right: 17%;
+  }
+}
+
+.range__point {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: $brown;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 7px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 6px;
+  }
+}
+
+.range__point:hover {
+  transform: scale(1.1);
+}

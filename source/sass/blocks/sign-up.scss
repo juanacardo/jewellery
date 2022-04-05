@@ -1,0 +1,88 @@
+.sign-up {
+  color: $font-transparent;
+  margin-right: 7.5%;
+  flex: 0 1 503px;
+
+  @media (max-width: $tablet-width) {
+    flex: 1 0 100%;
+    margin-right: 0;
+    margin-bottom: 41px;
+  }
+}
+
+.sign-up__wrapper {
+  border-bottom: 1px solid $white;
+  padding-top: 18px;
+  display: flex;
+
+  @media (max-width: $tablet-width) {
+    max-width: 560px;
+  }
+}
+
+.sign-up__title {
+  color: $white;
+  font-family: $cormorant;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.75px;
+  margin: 0 0 9px;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 13px;
+  }
+}
+
+.sign-up__text {
+  margin: 0 0 16px;
+}
+
+.sign-up input[type="email"] {
+  border: none;
+  background-color: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 10px 0;
+  margin-right: 12px;
+  flex: 1 1 385px;
+  color: $white;
+
+  @media (max-width: $mobile-width) {
+    margin-right: 8px;
+  }
+}
+
+.sign-up input[type="email"]:hover {
+  opacity: 0.5;
+}
+
+.sign-up input[type="email"]:hover::placeholder {
+  color: $white;
+}
+
+.sign-up__button {
+  padding: 10px 0;
+  background-color: inherit;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  flex: 0 0 104px;
+}
+
+.sign-up__button:hover {
+  opacity: 0.5;
+}
+
+.sign-up__button svg {
+  margin-left: 9px;
+}
+
+.sign-up__mobile-br {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: inline;
+  }
+}

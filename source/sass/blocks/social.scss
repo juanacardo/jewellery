@@ -1,0 +1,44 @@
+.social {
+  padding-top: 6px;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5px;
+  }
+}
+
+.social__item {
+  margin-bottom: 21px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 0;
+    margin-right: 21px;
+  }
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+}
+
+.social__link:hover {
+  opacity: 0.5;
+}
+
+.social__link svg {
+  margin-right: 14px;
+  flex-shrink: 0;
+
+  @media (max-width: $mobile-width) {
+    margin-right: 0;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.social__link span {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}

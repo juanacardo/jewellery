@@ -1,0 +1,64 @@
+.popup-form input {
+  border: none;
+  border-bottom: 1px solid $font;
+  background-color: transparent;
+  padding: 8px 0 10px;
+  width: 100%;
+  font-size: 14px;
+}
+
+.popup-form input[type="email"] {
+  margin-bottom: 30px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.popup-form input:hover {
+  opacity: 0.5;
+}
+
+.popup-form input:hover::placeholder {
+  color: $font;
+}
+
+.popup-form__help {
+  text-decoration: none;
+  font-size: 12px;
+  color: $font-transparent;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  text-align: right;
+  padding-top: 4px;
+  margin-bottom: 44px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 34px;
+  }
+}
+
+.popup-form__help:hover {
+  color: $font;
+}
+
+.popup-form__sign-up {
+  font-size: 14px;
+  font-weight: 500;
+  color: $font-transparent;
+  text-align: center;
+}
+
+.popup-form__link {
+  text-decoration: none;
+  color: $font;
+  font-weight: 500;
+}
+
+.popup-form__link:hover {
+  opacity: 0.5;
+}
+.popup-form_input-error {
+  border-bottom: 1px solid $error;
+}

@@ -1,0 +1,123 @@
+.faq {
+  padding-bottom: 108px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 73px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 59px;
+  }
+}
+
+.faq__title {
+  letter-spacing: 1px;
+  margin-bottom: 48px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 29px;
+  }
+}
+
+.faq__wrapper {
+  border: 1px solid $brown;
+  max-width: 970px;
+  margin: 0 auto;
+}
+
+.faq__item {
+  padding: 44px 38px 37px 43px;
+
+  @media (max-width: $tablet-width) {
+    padding: 44px 38px 19px 48px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 16px 11px 7px 23px;
+  }
+}
+
+.faq__item:not(:last-child) {
+  border-bottom: 1px solid $brown;
+}
+
+.faq__question {
+  display: flex;
+}
+
+.faq__button {
+  background-color: transparent;
+  border: none;
+  color: $brown;
+  padding: 0 12px;
+  align-self: flex-start;
+  margin-left: auto;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    padding: 4px 12px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 4px 12px 4px 10px;
+  }
+}
+
+.faq__button svg {
+  @media (max-width: $tablet-width) {
+    width: 23px;
+    height: 12px;
+  }
+}
+
+.faq__question h3 {
+  font-weight: 500;
+  font-size: 18px;
+  flex: 0 1 527px;
+  margin: 0 0 9px;
+  cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 0 27px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 139%;
+    margin: 0 0 13px;
+    flex: 0 1 100%;
+  }
+}
+
+.faq__question h3:hover,
+.faq__button:hover {
+  opacity: 0.5;
+}
+
+.faq__answer {
+  max-width: 527px;
+  margin: 0 0 3px;
+  padding-left: 7px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+    max-width: 530px;
+    margin: 0 0 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: 143%;
+    flex: 1 1 100%;
+    margin: 0 0 14px;
+    margin-right: 48px;
+  }
+}
+
+.faq__br-mobile {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: inline;
+  }
+}

@@ -1,0 +1,41 @@
+.search {
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.search__button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: $black;
+  position: absolute;
+  padding: 10px;
+  top: 4px;
+  left: -10px;
+}
+
+.search__button:hover {
+  opacity: 0.5;
+}
+
+.search input[type="search"] {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 8px 14px 29px;
+}
+
+.search input[type="search"]::placeholder {
+  color: $font-transparent;
+}
+
+.search input[type="search"]:hover {
+  opacity: 0.5;
+}
+
+.search input[type="search"]:hover::placeholder {
+  color: $font;
+}
