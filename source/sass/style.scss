@@ -1,23 +1,28 @@
 @import "vendor/normalize.scss";
-
+@import "vendor/swiper-bundle.scss";
 @import "global/fonts.scss";
 @import "global/variables.scss";
 @import "global/global.scss";
 @import "global/mixin.scss";
-
+@import "blocks/slider.scss";
 @import "blocks/page.scss";
 @import "blocks/button.scss";
 @import "blocks/spoller.scss";
-@import "blocks/popup.scss";
-@import "blocks/popup-overlay.scss";
 @import "blocks/page-header.scss";
 @import "blocks/search.scss";
 @import "blocks/header-navigation.scss";
 @import "blocks/promo.scss";
 @import "blocks/new-in-shop.scss";
-@import "blocks/slider.scss";
 @import "blocks/blog.scss";
+@import "blocks/faq.scss";
+@import "blocks/follow-us.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/sign-up.scss";
 @import "blocks/footer-menu.scss";
 @import "blocks/social.scss";
+@import "blocks/popup.scss";
+@import "blocks/popup-form.scss";
+@import "blocks/popup-overlay.scss";
+@import "blocks/catalog.scss";
+@import "blocks/filter.scss";
+@import "blocks/range.scss";

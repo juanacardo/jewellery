@@ -10,6 +10,7 @@ body {
   padding: 0;
   height: 100%;
 }
+
 html {
   scroll-behavior: smooth;
   margin-top: 0;
@@ -20,11 +21,13 @@ html {
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
 }
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
+
 // firefox placeholder \ invalid fix + ios bdrs
 input,
 textarea {
@@ -74,13 +77,7 @@ input[type="number"] {
 // ios button \ inputs reset
 select,
 textarea,
-input:matches([type="email"],
-  [type="number"],
-  [type="password"],
-  [type="search"],
-  [type="tel"],
-  [type="text"],
-  [type="url"]) {
+input:matches([type="email"], [type="number"], [type="password"], [type="search"], [type="tel"], [type="text"], [type="url"]) {
   appearance: none;
 }
 

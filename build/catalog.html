@@ -15,293 +15,465 @@
 
   <div class="page__wrapper">
 
-    <header class="page-header">
-      <div class="container">
-          <form class="search page-header__wrapper" action="https://echo.htmlacademy.ru/" method="get">
-            <button type="button">
-              <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.0482 10.0737L14 13.0248L13.0248 14L10.0737 11.0482C8.9757 11.9285 7.60993 12.4072 6.20262 12.4052C2.77877 12.4052 0 9.62646 0 6.20262C0 2.77877 2.77877 0 6.20262 0C9.62646 0 12.4052 2.77877 12.4052 6.20262C12.4072 7.60993 11.9285 8.9757 11.0482 10.0737ZM9.66575 9.56237C10.5404 8.66291 11.0289 7.45722 11.0269 6.20262C11.0269 3.53687 8.86768 1.37836 6.20262 1.37836C3.53687 1.37836 1.37836 3.53687 1.37836 6.20262C1.37836 8.86768 3.53687 11.0269 6.20262 11.0269C7.45722 11.0289 8.66291 10.5404 9.56237 9.66575L9.66575 9.56237Z"/>
+    <header class="page-header page-header--nojs">
+      <div class="page-header__wrapper">
+        <div class="container">
+          <div class="page-header__flex-wrapper">
+            <button class="page-header__menu-button" type="button" aria-label="Open menu">
+              <svg width="25" height="18" viewBox="0 0 25 18" fill="none" stroke="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#burger"></use>
               </svg>
             </button>
-            <input type="search">
-          </form>
-          <img src="img/content/logo.svg" alt="Logo of online store Jewellery" class="logo" width="66" height="66">
-          <div class="page-header__user-navigation">
-            <a class="page-header__login" href="#">Login</a>
-            <a class="page-header__cart" href="#">Cart
-              <span class="page-header__cart-counter"></span>
+            <form class="search" action="https://echo.htmlacademy.ru/" method="get">
+              <button class="search__button" type="button" aria-label="Site search">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#search"></use>
+                </svg>
+              </button>
+              <input type="search" placeholder="Type here to search">
+            </form>
+            <a href="main.html" class="page-header__logo" aria-label="Go to the main page">
+              <svg width="66" height="66" viewBox="0 0 66 66" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#logo"></use>
+              </svg>
             </a>
+            <div class="page-header__user-navigation">
+              <a class="page-header__login" href="modal.html">Login</a>
+              <a class="page-header__cart" href="#" aria-label="Go to your cart">
+                <span>Cart</span>
+                <span class="page-header__cart-counter">0</span>
+                <svg width="20" height="18" viewBox="0 0 20 18" stroke="currentColor" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#shopping_cart"></use>
+                </svg>
+              </a>
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="container">
         <nav class="header-navigation">
-          <ul class="header-navigation__list">
-            <li class="header-navigation__item"><a href="#">What’s new</a></li>
-            <li class="header-navigation__item"><a href="#">Chokers</a></li>
-            <li class="header-navigation__item"><a href="#">Necklaces</a></li>
-            <li class="header-navigation__item"><a href="#">Rings</a></li>
-            <li class="header-navigation__item"><a href="#">Earrings</a></li>
+          <ul class="header-navigation__list clear-list">
+            <li class="header-navigation__item"><a class="header-navigation__link" href="#">What’s new</a></li>
+            <li class="header-navigation__item"><a class="header-navigation__link" href="#">Chokers</a></li>
+            <li class="header-navigation__item"><a class="header-navigation__link" href="#">Necklaces</a></li>
+            <li class="header-navigation__item"><a class="header-navigation__link" href="#">Rings</a></li>
+            <li class="header-navigation__item"><a class="header-navigation__link" href="#">Earrings</a></li>
+          </ul>
+          <ul class="header-navigation__extra clear-list">
+            <li class="header-navigation__extra-item"><a class="header-navigation__extra-link" href="#">About CH</a>
+            </li>
+            <li class="header-navigation__extra-item"><a class="header-navigation__extra-link" href="#">Stores &
+                Hours</a></li>
+            <li class="header-navigation__extra-item"><a class="header-navigation__extra-link" href="#">Contact Us</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
-
     <main class="page__catalog">
-      <div class="container">
-        <section class="catalog-promo">
-          <h1 class="page__heading">All jewellery
-          <span class="page__heading page__heading--italic">Discover picks of fashion's finest trends in our jewellery catalog</span>
-        </h1>
-        </section>
+      <div class="promo promo--catalog">
+        <div class="container">
+          <h1 class="page__heading page__heading--catalog">All jewellery</h1>
+          <p class="page__text-italic page__text-italic--catalog">Discover picks of fashion's finest trends in our
+            jewellery catalog</p>
+        </div>
       </div>
 
-      <section class="catalog">
-        <h2 class="visually-hidden">Catalog of jewellery</h2>
-        <div class="container">
-          <form action="https://echo.htmlacademy.ru/" method="get">
-            <div class="filter spoller">
-              <div class="filter spoller__item spoller__item--nojs spoller__item--closed">
-                <div class="filter__label spoller__button-label">
-                  <h3>Product</h3>
-                  <button class="spoller__button" type="button" tabindex="-1"></button>
+      <div class="catalog">
+        <div class="catalog__wrapper">
+          <div class="container catalog__grid-wrapper">
+            <section class="filter filter--closed">
+              <h2 class="visually-hidden">Filter for selecting products in the catalog</h2>
+              <form class="filter__form" action="https://echo.htmlacademy.ru/" method="get">
+                <button class="filter__close" type="button">
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite_auto.svg#close"></use>
+                  </svg>
+                </button>
+                <div class="filter__wrapper spoller">
+                  <div class="filter__item spoller__item spoller__item--nojs spoller__item--closed">
+                    <div class="filter__label spoller__button-label">
+                      <h3>Product</h3>
+                      <button class="filter__button spoller__button" type="button" tabindex="-1">
+                        <svg width="17" height="10" viewBox="0 0 17 10" fill="none" stroke="currentColor"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite_auto.svg#open_arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="filter__content spoller__content">
+                      <div class="filter__checkbox">
+                        <input class="visually-hidden" type="checkbox" id="necklaces" name="necklaces" checked>
+                        <label for="necklaces">Necklaces</label>
+                      </div>
+                      <div class="filter__checkbox">
+                        <input class="visually-hidden" type="checkbox" id="chokers" name="chokers" checked>
+                        <label for="chokers">Chokers</label>
+                      </div>
+                      <div class="filter__checkbox">
+                        <input class="visually-hidden" type="checkbox" id="rings" name="rings">
+                        <label for="rings">Rings</label>
+                      </div>
+                      <div class="filter__checkbox">
+                        <input class="visually-hidden" type="checkbox" id="earrings" mane="earrings" checked>
+                        <label for="earrings">Earrings</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item spoller__item spoller__item--nojs spoller__item--closed">
+                    <div class="filter__label spoller__button-label">
+                      <h3>Material</h3>
+                      <button class="filter__button spoller__button" type="button" tabindex="-1">
+                        <svg width="17" height="10" viewBox="0 0 17 10" fill="none" stroke="currentColor"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite_auto.svg#open_arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="filter__content spoller__content">
+                      <div class="filter__checkbox">
+                        <input class="visually-hidden" type="checkbox" id="gold" name="gold" checked>
+                        <label for="gold">Gold</label>
+                      </div>
+                      <div class="filter__checkbox">
+                        <input class="visually-hidden" type="checkbox" id="silver" name="silver" checked>
+                        <label for="silver">Silver</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item spoller__item spoller__item--nojs spoller__item--closed">
+                    <div class="filter__label spoller__button-label">
+                      <h3>Collection</h3>
+                      <button class="filter__button spoller__button" type="button" tabindex="-1">
+                        <svg width="17" height="10" viewBox="0 0 17 10" fill="none" stroke="currentColor"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite_auto.svg#open_arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="filter__content spoller__content">
+                      <div class="filter__checkbox">
+                        <input class="visually-hidden" type="checkbox" id="pink_flamingo" name="pink_flamingo" checked>
+                        <label for="pink_flamingo">Pink flamingo</label>
+                      </div>
+                      <div class="filter__checkbox">
+                        <input class="visually-hidden" type="checkbox" id="dreams" name="dreams" checked>
+                        <label for="dreams">Dreams</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__item spoller__item spoller__item--nojs spoller__item--closed">
+                    <div class="filter__label filter__label--range spoller__button-label">
+                      <h3>Price</h3>
+                      <button class="filter__button spoller__button" type="button" tabindex="-1">
+                        <svg width="17" height="10" viewBox="0 0 17 10" fill="none" stroke="currentColor"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite_auto.svg#open_arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="filter__content filter__content--range spoller__content">
+                      <div class="range filter__range">
+                        <div class="range__inner">
+                          <div class="range__progress"></div>
+                        </div>
+                        <div class="range__button range__button--left">
+                          <span class="range__point"></span>
+                          <span class="range__price">$ 55</span>
+                        </div>
+                        <div class="range__button range__button--right">
+                          <span class="range__point"></span>
+                          <span class="range__price">$ 155</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="spoller__content">
-                  <input type="checkbox" id="necklaces" cheched>
-                  <label for="necklaces">Necklaces</label>
-                  <input type="checkbox" id="chokers" cheched>
-                  <label for="chokers">Chokers</label>
-                  <input type="checkbox" id="rings">
-                  <label for="rings">Rings</label>
-                  <input type="checkbox" id="earrings" cheched>
-                  <label for="earrings">Earrings</label>
-                </div>
-              </div>
-              <div class="filter spoller__item spoller__item--nojs spoller__item--closed">
-                <div class="filter__label spoller__button-label">
-                  <h3>Material</h3>
-                  <button class="spoller__button" type="button" tabindex="-1"></button>
-                </div>
-                <div class="spoller__content">
-                  <input type="checkbox" id="gold" cheched>
-                  <label for="gold">Gold</label>
-                  <input type="checkbox" id="silver" cheched>
-                  <label for="silver">Silver</label>
-                </div>
-              </div>
-              <div class="filter spoller__item spoller__item--nojs spoller__item--closed">
-                <div class="filter__label spoller__button-label">
-                  <h3>Collection</h3>
-                  <button class="spoller__button" type="button" tabindex="-1"></button>
-                </div>
-                <div class="spoller__content">
-                  <input type="checkbox" id="pink_flamingo" cheched>
-                  <label for="pink_flamingo">Pink flamingo</label>
-                  <input type="checkbox" id="dreams" cheched>
-                  <label for="dreams">Dreams</label>
-                </div>
-              </div>
-              <div class="filter spoller__item spoller__item--nojs spoller__item--closed">
-                <div class="filter__label spoller__button-label">
-                  <h3>Price</h3>
-                  <button class="spoller__button" type="button" tabindex="-1"></button>
-                </div>
-                <div class="spoller__content">
-                  <input type="range">
-                </div>
-              </div>
-            </div>
-            <button type="button">Apply</button>
-            <button type="button">Clear All</button>
-          </form>
-          <ul class="catalog__list">
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/double-pearl-earrings.jpg" alt="Double pearl earrings" width="270" height="272">
-                <h3>Double pearl earrings</h3>
-                <p>$ 115</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/black-choker-gold-bead.jpg" alt="Choker with gold bead" width="270" height="272">
-                <h3>Choker with gold bead</h3>
-                <p>$ 55</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/dainty-gold-necklace.jpg" alt="Gold layered necklace" width="270" height="272">
-                <h3>Gold layered necklace</h3>
-                <p>$ 155</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/blue-gemstone-pendant.jpg" alt="Blue gemstone pendant" width="270" height="272">
-                <h3>Blue gemstone pendant</h3>
-                <p>$ 105</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/boho-earrings.jpg" alt="Boho earrings" width="270" height="272">
-                <h3>Boho earrings</h3>
-                <p>$ 75</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/bird-necklace.jpg" alt="Gold bird necklace" width="270" height="272">
-                <h3>Gold bird necklace</h3>
-                <p>$ 135</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/black-leather-choker-necklace.jpg" alt="Black leather choker" width="270" height="272">
-                <h3>Black leather choker</h3>
-                <p>$ 85</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/purple-gemstone-necklace.jpg" alt="Necklace with amethyst" width="270" height="272">
-                <h3>Necklace with amethyst</h3>
-                <p>$ 145</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/elephant-earrings.jpg" alt="Elephant earrings" width="270" height="272">
-                <h3>Elephant earrings</h3>
-                <p>$ 95</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/threader-necklace-closeup.jpg" alt="Threader necklace" width="270" height="272">
-                <h3>Threader necklace</h3>
-                <p>$ 115</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/origami-crane-necklace.jpg" alt="Origami crane necklace" width="270" height="272">
-                <h3>Origami crane necklace</h3>
-                <p>$ 105</p>
-              </a>
-            </li>
-            <li class="catalog__item">
-              <a href="#">
-                <img src="img/content/marble-earrings.jpg" alt="Marble earrings" width="270" height="272">
-                <h3>Marble earrings</h3>
-                <p>$ 95</p>
-              </a>
-            </li>
-          </ul>
-          <div class="pagination">
-            <button class="pagination__button pagination__button--previous" type="button">Previous</button>
-            <ul class="pagination__list">
-              <li class="pagination__link pagination__link--current"><a href="#">1</a></li>
-              <li class="pagination__link"><a href="#">2</a></li>
-              <li class="pagination__link"><a href="#">3</a></li>
-              <li class="pagination__link"><a href="#">4</a></li>
-              <li class="pagination__link"><a href="#">5</a></li>
-            </ul>
-            <button class="pagination__button pagination__button--next" type="button">Next</button>
+                <button class="button filter__apply-button" type="submit">Apply</button>
+                <button class="button button--invert" type="reset">Clear All</button>
+              </form>
+              <button class="button filter__show-button" type="button">Filter</button>
+            </section>
+            <section>
+              <h2 class="visually-hidden">Catalog of jewellery</h2>
+              <ul class="catalog__list clear-list">
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <source srcset="img/content/double-pearl-earrings.webp 1x, img/content/double-pearl-earrings@2x.webp 2x">
+                        <img src="img/content/double-pearl-earrings.jpg" alt="Double pearl earrings" width="270"
+                          height="272">
+                      </picture>
+                    </div>
+                    <h3>Double pearl earrings</h3>
+                    <p>$ 115</p>
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <source srcset="img/content/black-choker-gold-bead.webp 1x, img/content/black-choker-gold-bead@2x.webp 2x">
+                        <img src="img/content/black-choker-gold-bead.jpg" alt="Choker with gold bead" width="270"
+                          height="272">
+                      </picture>
+                    </div>
+                    <h3>Choker with gold bead</h3>
+                    <p>$ 55</p>
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <picture>
+                          <source srcset="img/content/gold-layered-necklace.webp 1x, img/content/gold-layered-necklace@2x.webp 2x">
+                          <img src="img/content/gold-layered-necklace.jpg" alt="Gold layered necklace" width="270"
+                            height="272">
+                        </picture>
+                      </picture>
+                    </div>
+                    <h3>Gold layered necklace</h3>
+                    <p>$ 155</p>
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <source srcset="img/content/blue-gemstone-pendant.webp 1x, img/content/blue-gemstone-pendant@2x.webp 2x">
+                        <img src="img/content/blue-gemstone-pendant.jpg" alt="Blue gemstone pendant" width="270"
+                          height="272">
+                      </picture>
+                    </div>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>$ 105</p>
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <source srcset="img/content/boho-earrings.webp 1x, img/content/boho-earrings@2x.webp 2x">
+                        <img src="img/content/boho-earrings.jpg" alt="Boho earrings" width="270" height="272">
+                      </picture>
+                    </div>
+                    <h3>Boho earrings</h3>
+                    <p>$ 75</p>
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <source srcset="img/content/bird-necklace.webp 1x, img/content/bird-necklace@2x.webp 2x">
+                        <img src="img/content/bird-necklace.jpg" alt="Gold bird necklace" width="270" height="272">
+                      </picture>
+                    </div>
+                    <h3>Gold bird necklace</h3>
+                    <p>$ 135</p>
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <source srcset="img/content/black-leather-choker-necklace.webp 1x, img/content/black-leather-choker-necklace@2x.webp 2x">
+                        <img src="img/content/black-leather-choker-necklace.jpg" alt="Black leather choker" width="270"
+                          height="272">
+                      </picture>
+                    </div>
+                    <h3>Black leather choker</h3>
+                    <p>$ 85</p>
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <source srcset="img/content/purple-gemstone-necklace.webp 1x, img/content/purple-gemstone-necklace@2x.webp 2x">
+                        <img src="img/content/purple-gemstone-necklace.jpg" alt="Necklace with amethyst" width="270"
+                          height="272">
+                      </picture>
+                    </div>
+                    <h3>Necklace with amethyst</h3>
+                    <p>$ 145</p>
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <source srcset="img/content/elephant-earrings.webp 1x, img/content/elephant-earrings@2x.webp 2x">
+                        <img src="img/content/elephant-earrings.jpg" alt="Elephant earrings" width="270" height="272">
+                      </picture>
+                    </div>
+                    <h3>Elephant earrings</h3>
+                    <p>$ 95</p>
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <source srcset="img/content/threader-necklace-closeup.webp 1x, img/content/threader-necklace-closeup@2x.webp 2x">
+                        <img src="img/content/threader-necklace-closeup.jpg" alt="Threader necklace" width="270"
+                          height="272">
+                      </picture>
+                    </div>
+                    <h3>Threader necklace</h3>
+                    <p>$ 115</p>
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <source srcset="img/content/origami-crane-necklace.webp 1x, img/content/origami-crane-necklace@2x.webp 2x">
+                        <img src="img/content/origami-crane-necklace.jpg" alt="Origami crane necklace" width="270"
+                          height="272">
+                      </picture>
+                    </div>
+                    <h3>Origami crane necklace</h3>
+                    <p>$ 105</p>
+                  </a>
+                </li>
+                <li class="catalog__item">
+                  <a class="catalog__link" href="#">
+                    <div class="catalog__img">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <picture>
+                        <source srcset="img/content/marble-earrings.webp 1x, img/content/marble-earrings@2x.webp 2x">
+                        <img src="img/content/marble-earrings.jpg" alt="Marble earrings" width="270" height="272">
+                      </picture>
+                    </div>
+                    <h3>Marble earrings</h3>
+                    <p>$ 95</p>
+                  </a>
+                </li>
+              </ul>
+            </section>
           </div>
         </div>
-      </section>
+        <div class="container">
+          <div class="catalog__grid-wrapper">
+            <div class="catalog__pagination pagination">
+              <button class="catalog__pagination-button catalog__pagination-button--previous"
+                type="button">Previous</button>
+              <ul class="catalog__pagination-list clear-list">
+                <li class="catalog__pagination-item catalog__pagination-item--current">1</li>
+                <li class="catalog__pagination-item">2</li>
+                <li class="catalog__pagination-item">3</li>
+                <li class="catalog__pagination-item">4</li>
+                <li class="catalog__pagination-item">5</li>
+              </ul>
+              <button class="catalog__pagination-button catalog__pagination-button--next" type="button">Next</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer class="page-footer">
       <div class="container">
-        <div class="page-footer__sign-up">
-          <form action="https://echo.htmlacademy.ru/" method="get">
-            <p class="page-footer__title">The good stuff in your inbox </p>
-            <p>News and updates from CH. No spam, we promise.</p>
-            <input type="email">
-            <button type="button">Sign Up
-              <svg width="30" height="11" viewBox="0 0 30 11" fill="none" stroke="currentColor"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10" />
-              </svg>
-            </button>
+        <div class="page-footer__flex-wrapper">
+          <form class="sign-up" action="https://echo.htmlacademy.ru/" method="get">
+            <p class="sign-up__title">The good stuff <br class="sign-up__mobile-br">in your inbox </p>
+            <p class="sign-up__text">News and updates from CH. <br class="sign-up__mobile-br">No spam, we promise.</p>
+            <div class="sign-up__wrapper">
+              <input type="email" placeholder="Your E-mail">
+              <button class="sign-up__button" type="button">Sign Up
+                <svg width="30" height="11" viewBox="0 0 30 11" fill="none" stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
           </form>
+          <ul class="footer-menu clear-list">
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Ordering & Payment</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Terms & Conditions</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Returns & Exchanges</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Delivery</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">About CH</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Stores & Hours</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Jobs</a></li>
+            <li class="footer-menu__item"><a class="footer-menu__link" href="#">Contact Us</a></li>
+          </ul>
+          <ul class="social clear-list">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#facebook"></use>
+                </svg>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#inst"></use>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#pinterest"></use>
+                </svg>
+                <span>Pinterest</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite_auto.svg#twitter"></use>
+                </svg>
+                <span>Twitter</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul class="page-footer__menu">
-          <li><a href="#">Ordering & Payment</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Returns & Exchanges</a></li>
-          <li><a href="#">Delivery</a></li>
-          <li><a href="#">About CH</a></li>
-          <li><a href="#">Stores & Hours</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-        <ul class="social">
-          <li>
-            <a href="#">
-              Facebook
-              <svg width="8" height="15" viewBox="0 0 8 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M5.33333 8.625H7.2381L8 5.625H5.33333V4.125C5.33333 3.3525 5.33333 2.625 6.85714 2.625H8V0.105C7.75162 0.0727501 6.81371 0 5.82324 0C3.75467 0 2.28571 1.24275 2.28571 3.525V5.625H0V8.625H2.28571V15H5.33333V8.625Z" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Instagram
-              <svg width="15" height="15" viewBox="0 0 15 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M7.5 0C9.53775 0 9.792 0.00749996 10.5915 0.045C11.3903 0.0825 11.934 0.20775 12.4125 0.39375C12.9075 0.58425 13.3245 0.84225 13.7415 1.2585C14.1229 1.63342 14.418 2.08694 14.6063 2.5875C14.7915 3.06525 14.9175 3.60975 14.955 4.4085C14.9903 5.208 15 5.46225 15 7.5C15 9.53775 14.9925 9.792 14.955 10.5915C14.9175 11.3903 14.7915 11.934 14.6063 12.4125C14.4185 12.9133 14.1233 13.367 13.7415 13.7415C13.3665 14.1227 12.913 14.4178 12.4125 14.6063C11.9347 14.7915 11.3903 14.9175 10.5915 14.955C9.792 14.9903 9.53775 15 7.5 15C5.46225 15 5.208 14.9925 4.4085 14.955C3.60975 14.9175 3.066 14.7915 2.5875 14.6063C2.08674 14.4184 1.63315 14.1232 1.2585 13.7415C0.877055 13.3666 0.581949 12.9131 0.39375 12.4125C0.20775 11.9347 0.0825 11.3903 0.045 10.5915C0.00974996 9.792 0 9.53775 0 7.5C0 5.46225 0.00749996 5.208 0.045 4.4085C0.0825 3.609 0.20775 3.066 0.39375 2.5875C0.581427 2.08663 0.876603 1.63299 1.2585 1.2585C1.63325 0.876923 2.08682 0.581797 2.5875 0.39375C3.066 0.20775 3.609 0.0825 4.4085 0.045C5.208 0.00974996 5.46225 0 7.5 0ZM7.5 3.75C6.50544 3.75 5.55161 4.14509 4.84835 4.84835C4.14509 5.55161 3.75 6.50544 3.75 7.5C3.75 8.49456 4.14509 9.44839 4.84835 10.1517C5.55161 10.8549 6.50544 11.25 7.5 11.25C8.49456 11.25 9.44839 10.8549 10.1517 10.1517C10.8549 9.44839 11.25 8.49456 11.25 7.5C11.25 6.50544 10.8549 5.55161 10.1517 4.84835C9.44839 4.14509 8.49456 3.75 7.5 3.75ZM12.375 3.5625C12.375 3.31386 12.2762 3.0754 12.1004 2.89959C11.9246 2.72377 11.6861 2.625 11.4375 2.625C11.1889 2.625 10.9504 2.72377 10.7746 2.89959C10.5988 3.0754 10.5 3.31386 10.5 3.5625C10.5 3.81114 10.5988 4.0496 10.7746 4.22541C10.9504 4.40123 11.1889 4.5 11.4375 4.5C11.6861 4.5 11.9246 4.40123 12.1004 4.22541C12.2762 4.0496 12.375 3.81114 12.375 3.5625ZM7.5 5.25C8.09674 5.25 8.66903 5.48705 9.09099 5.90901C9.51295 6.33097 9.75 6.90326 9.75 7.5C9.75 8.09674 9.51295 8.66903 9.09099 9.09099C8.66903 9.51295 8.09674 9.75 7.5 9.75C6.90326 9.75 6.33097 9.51295 5.90901 9.09099C5.48705 8.66903 5.25 8.09674 5.25 7.5C5.25 6.90326 5.48705 6.33097 5.90901 5.90901C6.33097 5.48705 6.90326 5.25 7.5 5.25Z" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Pinterest
-              <svg width="16" height="15" viewBox="0 0 16 15" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M8.52464 0.0700085C6.73009 -0.176851 4.90683 0.233922 3.39151 1.22648C1.8762 2.21903 0.771177 3.72633 0.280492 5.47006C-0.210193 7.21378 -0.0534017 9.07616 0.721915 10.7133C1.49723 12.3504 2.83871 13.6518 4.49864 14.377C4.45375 13.8009 4.49496 13.2213 4.62089 12.6573C4.75964 12.028 5.59289 8.56001 5.59289 8.56001C5.42697 8.18808 5.34405 7.78448 5.34989 7.37726C5.34989 6.26351 5.99264 5.43251 6.79214 5.43251C6.93577 5.43042 7.07817 5.45928 7.20965 5.51713C7.34113 5.57498 7.45861 5.66047 7.5541 5.76778C7.6496 5.87508 7.72087 6.00169 7.76306 6.139C7.80526 6.27631 7.81739 6.42109 7.79864 6.56351C7.79864 7.23851 7.36514 8.26001 7.13864 9.21851C7.09388 9.39429 7.09104 9.57814 7.13035 9.75522C7.16966 9.93231 7.25002 10.0977 7.36496 10.238C7.4799 10.3783 7.6262 10.4897 7.79207 10.5631C7.95793 10.6366 8.13873 10.67 8.31989 10.6608C9.74339 10.6608 10.6974 8.83751 10.6974 6.68501C10.6974 5.03501 9.60464 3.79901 7.59014 3.79901C7.10817 3.78028 6.62743 3.8597 6.17709 4.03245C5.72676 4.2052 5.31623 4.46767 4.97043 4.80392C4.62463 5.14018 4.35078 5.54321 4.16551 5.98854C3.98023 6.43387 3.8874 6.9122 3.89264 7.39451C3.87117 7.9295 4.04377 8.45423 4.37864 8.87201C4.44122 8.91872 4.48691 8.98451 4.50882 9.05946C4.53074 9.1344 4.52769 9.21444 4.50014 9.28751C4.46564 9.42551 4.37864 9.75476 4.34414 9.87551C4.33697 9.91646 4.32027 9.95515 4.29541 9.98847C4.27054 10.0218 4.2382 10.0488 4.20099 10.0673C4.16378 10.0859 4.12273 10.0954 4.08116 10.0952C4.03959 10.0949 3.99865 10.085 3.96164 10.066C2.92364 9.65051 2.43464 8.50826 2.43464 7.20401C2.43464 5.06876 4.22264 2.51276 7.80014 2.51276C10.6471 2.51276 12.5401 4.59551 12.5401 6.82301C12.5401 9.75476 10.9074 11.959 8.49464 11.959C8.13403 11.9705 7.77634 11.891 7.45464 11.7276C7.13294 11.5643 6.85762 11.3224 6.65414 11.0245C6.65414 11.0245 6.22064 12.7615 6.13514 13.09C5.96061 13.6575 5.70307 14.1961 5.37089 14.6883C6.06314 14.8983 6.78239 15.0033 7.50539 15.0003C8.49058 15.001 9.46624 14.8075 10.3765 14.4307C11.2868 14.0539 12.1138 13.5012 12.8102 12.8043C13.5066 12.1075 14.0587 11.2801 14.4348 10.3695C14.811 9.45899 15.0039 8.48319 15.0024 7.49801C15.0015 5.68676 14.3452 3.937 13.1549 2.57184C11.9645 1.20668 10.3204 0.318307 8.52614 0.0707584L8.52464 0.0700085Z" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              Twitter
-              <svg width="15" height="13" viewBox="0 0 15 13" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M14.9993 1.54324C14.4375 1.80812 13.8417 1.98209 13.2317 2.05937C13.8747 1.64947 14.3559 1.00438 14.5857 0.244297C13.9823 0.627078 13.3207 0.895338 12.6312 1.04045C12.1681 0.512227 11.5542 0.161908 10.885 0.0439529C10.2158 -0.0740019 9.52875 0.047017 8.93073 0.388195C8.33271 0.729374 7.85718 1.2716 7.57809 1.93057C7.29899 2.58954 7.23196 3.32833 7.38741 4.0321C6.16374 3.96673 4.96664 3.62777 3.87384 3.03724C2.78104 2.4467 1.81696 1.6178 1.0442 0.604331C0.770671 1.10512 0.626929 1.67441 0.627698 2.2539C0.627698 3.39126 1.17077 4.39606 1.99642 4.98435C1.50781 4.96795 1.02995 4.8273 0.602679 4.57411V4.6149C0.602826 5.37238 0.848731 6.1065 1.2987 6.69279C1.74867 7.27907 2.37501 7.68144 3.07153 7.83167C2.61795 7.96269 2.14235 7.98201 1.68073 7.88815C1.87711 8.54016 2.25987 9.11038 2.77541 9.51897C3.29095 9.92757 3.91346 10.1541 4.55578 10.1668C3.9174 10.7012 3.18645 11.0963 2.40474 11.3294C1.62303 11.5625 0.805873 11.6291 0 11.5253C1.40676 12.4897 3.04437 13.0017 4.71693 13C10.378 13 13.4738 8.0011 13.4738 3.66579C13.4738 3.5246 13.4701 3.38184 13.4642 3.24222C14.0668 2.778 14.5869 2.20293 15 1.54403L14.9993 1.54324Z" />
-              </svg>
-            </a>
-          </li>
-        </ul>
       </div>
     </footer>
   </div>
 
   <div class="popup popup--closed">
-    <h3 class="page__title">Log In</h3>
-    <form class="form" action="https://echo.htmlacademy.ru/" method="get">
-      <button type="button">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M7 5.44469L12.4447 0L14 1.55531L8.55531 7L14 12.4447L12.4447 14L7 8.55531L1.55531 14L0 12.4447L5.44469 7L0 1.55531L1.55531 0L7 5.44469Z" />
-        </svg>
-      </button>
-      <input type="email">
-      <div class="form__input-wrapper">
-        <input type="password">
-        <span>Forgot your password?</span>
-      </div>
-      <button type="submit">Log In</button>
-      <p class="form__sign-up">Don’t have an account?
-        <a href="#">Sign up</a>
+    <button type="button" class="popup__button">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="img/sprite_auto.svg#close"></use>
+      </svg>
+    </button>
+    <h2 class="popup__title page__title">Log In</h2>
+    <form class="popup-form" action="https://echo.htmlacademy.ru/" method="get">
+      <input type="email" placeholder="Your E-mail" required id="popup-tel">
+      <input type="password" placeholder="Password" required id="popup-password">
+      <span class="popup-form__help">Forgot your password?</span>
+      <button class="button" type="submit">Log In</button>
+      <p class="popup-form__sign-up">Don’t have an account?
+        <a class="popup-form__link" href="#">Sign up</a>
       </p>
     </form>
   </div>
   <div class="popup-overlay popup-overlay--closed"></div>
-  <script src="js/main.js" type="module"></script>
+  <script src="js/main.min.js" type="module"></script>
 </body>
 
 </html>

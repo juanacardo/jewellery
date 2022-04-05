@@ -1,3 +1,30 @@
 .button {
+  font-weight: 500;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 68px;
+  background-color: $brown;
+  color: $white;
+  border: 1px solid $brown;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
+}
+
+.button--invert {
+  background-color: transparent;
+  color: $font;
+}
+
+.button:hover {
+  background-color: rgba($brown, 0.8);
+  border: 1px solid rgba($brown, 0.8);
+}
+
+.button--invert:hover {
+  background-color: transparent;
+  border: 1px solid rgba($brown, 0.8);
+  color: rgba($font, 0.5);
 }
