@@ -31,7 +31,9 @@
                   <use xlink:href="img/sprite_auto.svg#search"></use>
                 </svg>
               </button>
-              <input type="search" placeholder="Type here to search">
+              <label>
+                <input type="search" placeholder="Type here to search">
+              </label>
             </form>
             <a class="page-header__logo" role="img">
               <svg width="66" height="66" viewBox="0 0 66 66" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -392,8 +394,10 @@
             <p class="sign-up__title">The good stuff <br class="sign-up__mobile-br">in your inbox </p>
             <p class="sign-up__text">News and updates from CH. <br class="sign-up__mobile-br">No spam, we promise.</p>
             <div class="sign-up__wrapper">
-              <input type="email" placeholder="Your E-mail">
-              <button class="sign-up__button" type="button">Sign Up
+              <label>
+                <input type="email" placeholder="Your E-mail">
+              </label>
+              <button class="sign-up__button" type="submit">Sign Up
                 <svg width="30" height="11" viewBox="0 0 30 11" fill="none" stroke="currentColor"
                   xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/sprite_auto.svg#arrow"></use>
@@ -458,8 +462,12 @@
     </button>
     <h2 class="popup__title page__title">Log In</h2>
     <form class="popup-form" action="https://echo.htmlacademy.ru/" method="get">
-      <input type="email" placeholder="Your E-mail" id="popup-email" name="e-mail" required>
-      <input type="password" placeholder="Password" id="popup-password" name="password" required>
+      <label>
+        <input type="email" placeholder="Your E-mail" id="popup-email" name="e-mail" required>
+      </label>
+      <label>
+        <input type="password" placeholder="Password" id="popup-password" name="password" required>
+      </label>
       <span class="popup-form__help">Forgot your password?</span>
       <button class="button" type="submit">Log In</button>
       <p class="popup-form__sign-up">Don’t have an account?
